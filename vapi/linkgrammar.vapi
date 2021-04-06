@@ -90,9 +90,9 @@ namespace LinkGrammar {
         public unowned string get_link_rlabel(LinkIdx index);
         [CCode (cname = "linkage_get_link_num_domains")]
         public int get_link_num_domains(LinkIdx index);
-        [CCode (cname = "linkage_get_link_domain_names")]
+        [CCode (cname = "linkage_get_link_domain_names", array_length = false, array_null_terminated = true)]
         public unowned string[] get_link_domain_names(LinkIdx index);
-        [CCode (cname = "linkage_get_words", array_length = false)]
+        [CCode (cname = "linkage_get_words", array_length = false, array_null_terminated = true)]
         public unowned string[] get_words();
         [CCode (cname = "linkage_get_disjunct_str")]
         public string get_disjunct_str(WordIdx word_num);
