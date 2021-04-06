@@ -12,7 +12,7 @@ namespace Hello {
             };
 
             var opts = new ParseOptions ();
-            var dict = new Dictionary.create_lang ("en");
+            var dict = new Dictionary ("en");
 
             opts.set_max_null_count (10);
 
