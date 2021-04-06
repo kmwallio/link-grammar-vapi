@@ -107,5 +107,3 @@ LEFT-WALL the side.n affects.v [were] devastating.g . RIGHT-WALL
     |      |     |       |         |          |       |      |
 LEFT-WALL the side.n effects.n were.v-d devastating.g . RIGHT-WALL
 ```
-
-The square brackets identify a word that could not be linked. That word or surrounding words would have to be adjusted to form a proper grammar link tree.
