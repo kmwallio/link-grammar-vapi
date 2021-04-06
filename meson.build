@@ -47,7 +47,7 @@ executable(
     ],
     vala_args: [
         meson.source_root() + '/vapi/config.vapi',
-        meson.source_root() + '/vapi/linkgrammar.vapi'
+        meson.source_root() + '/vapi/link-grammar.vapi'
     ],
     install : false
 )
