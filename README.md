@@ -14,13 +14,9 @@ Put linkgrammar.vapi in your vapi directory.
 
 ```meson
 add_project_arguments(['--vapidir', join_paths(meson.current_source_dir(), 'vapi')], language: 'vala')
+cc = meson.get_compiler('c')
+linkgrammar = cc.find_library('link-grammar', required: true)
 
-# Find linkgrammar
-linkgrammar = dependency('liblink-grammar', version: '>= 5.8.0', required: false)
-if linkgrammar.found() == false
-    cc = meson.get_compiler('c')
-    linkgrammar = cc.find_library('liblink-grammar', required: true)
-endif
 ```
 
 ### Usage
