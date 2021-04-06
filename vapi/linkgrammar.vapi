@@ -6,6 +6,8 @@ namespace LinkGrammar {
     public class Dictionary
     {
         [CCode (cname = "dictionary_create_lang")]
+        public Dictionary (string language);
+        [CCode (cname = "dictionary_create_lang")]
         public Dictionary.create_lang (string language);
         [CCode (cname = "dictionary_get_lang")]
         public string get_lang();
@@ -81,23 +83,23 @@ namespace LinkGrammar {
         [CCode (cname = "linkage_get_link_length")]
         public int get_link_length(LinkIdx index);
         [CCode (cname = "linkage_get_link_label")]
-        public string get_link_label(LinkIdx index);
+        public unowned string get_link_label(LinkIdx index);
         [CCode (cname = "linkage_get_link_llabel")]
-        public string get_link_llabel(LinkIdx index);
+        public unowned string get_link_llabel(LinkIdx index);
         [CCode (cname = "linkage_get_link_rlabel")]
-        public string get_link_rlabel(LinkIdx index);
+        public unowned string get_link_rlabel(LinkIdx index);
         [CCode (cname = "linkage_get_link_num_domains")]
         public int get_link_num_domains(LinkIdx index);
         [CCode (cname = "linkage_get_link_domain_names")]
-        public string[] get_link_domain_names(LinkIdx index);
-        [CCode (cname = "linkage_get_words")]
-        public string[] get_words();
+        public unowned string[] get_link_domain_names(LinkIdx index);
+        [CCode (cname = "linkage_get_words", array_length = false)]
+        public unowned string[] get_words();
         [CCode (cname = "linkage_get_disjunct_str")]
         public string get_disjunct_str(WordIdx word_num);
         [CCode (cname = "linkage_get_disjunct_cost")]
         public double get_disjunct_cost(WordIdx word_num);
         [CCode (cname = "linkage_get_word")]
-        public string get_word(WordIdx word_num);
+        public unowned string get_word(WordIdx word_num);
         [CCode (cname = "linkage_print_constituent_tree")]
         public string print_constituent_tree(ConstituentDisplayStyle mode);
         // public static void free_constituent_tree_str(string str);
@@ -141,11 +143,11 @@ namespace LinkGrammar {
         [CCode (cname = "parse_options_set_debug")]
         public void set_debug(string debug);
         [CCode (cname = "parse_options_get_debug")]
-        public char * get_debug();
+        public string get_debug();
         [CCode (cname = "parse_options_set_test")]
         public void set_test(string test);
         [CCode (cname = "parse_options_get_test")]
-        public char * get_test();
+        public string get_test();
         [CCode (cname = "parse_options_set_linkage_limit")]
         public void set_linkage_limit(int linkage_limit);
         [CCode (cname = "parse_options_get_linkage_limit")]

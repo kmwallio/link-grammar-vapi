@@ -1,6 +1,6 @@
 # My First Time VAPI...
 
-Still a work in progress, need to work on proper freeing of strings.
+your milage may vary. A Vala Binding for [link-grammar](https://github.com/opencog/link-grammar/).
 
 ## Requirements
 
