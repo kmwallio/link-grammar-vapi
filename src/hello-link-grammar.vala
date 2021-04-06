@@ -29,9 +29,6 @@ namespace Hello {
                     var linkage = new Linkage (0, sentence, opts);
                     var diagram = linkage.print_diagram (true, 800);
                     print ("%s\n", diagram);
-                } else {
-                    var linkage = new Linkage (0, sentence, opts);
-                    print ("%s\n", linkage.print_constituent_tree(ConstituentDisplayStyle.SINGLE_LINE));
                 }
             }
 
